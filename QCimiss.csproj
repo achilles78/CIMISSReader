@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{915E3149-13EC-4269-A3DB-E39A473A5422}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>QCimiss</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="Ice">
+      <HintPath>.\Ice.dll</HintPath>
+    </Reference>
+    <Reference Include="music-client-v1.4.0">
+      <HintPath>.\music-client-v1.4.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>.\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="QCimiss\TimePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QCimiss\LoadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QCimiss\chooseElement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QCimiss\Properties\Settings.cs" />
+    <Compile Include="QCimiss\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QCimiss\Dataview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QCimiss\Computer.cs" />
+    <Compile Include="QCimiss\Cimiss.cs" />
+    <Compile Include="QCimiss\ElementTable.cs" />
+    <Compile Include="QCimiss\ElementTableId.cs" />
+    <Compile Include="QCimiss\Datainfo.cs" />
+    <Compile Include="QCimiss\Parainfo.cs" />
+    <Compile Include="QCimiss\paramhelp.cs" />
+    <Compile Include="QCimiss\RegForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QCimiss\chooseLvls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QCimiss\Properties\Resources.cs" />
+    <Compile Include="QCimiss\sql.cs" />
+    <Compile Include="QCimiss\citycode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QCimiss\QCmss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QCimiss\JsonHelper.cs" />
+    <Compile Include="QCimiss\Program.cs" />
+    <EmbeddedResource Include="QCimiss.Dataview.resources" />
+    <EmbeddedResource Include="QCimiss.chooseLvls.resources" />
+    <EmbeddedResource Include="QCimiss.LoadForm.resources" />
+    <EmbeddedResource Include="QCimiss.QCmss.resources" />
+    <EmbeddedResource Include="QCimiss.RegForm.resources" />
+    <EmbeddedResource Include="QCimiss.chooseElement.resources" />
+    <EmbeddedResource Include="QCimiss.Properties.Resources.resources" />
+    <EmbeddedResource Include="QCimiss.TimePicker.resources" />
+    <EmbeddedResource Include="QCimiss.citycode.resources" />
+    <EmbeddedResource Include="QCimiss.Form1.resources" />
+  </ItemGroup>
+</Project>
